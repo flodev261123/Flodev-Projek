@@ -1,10 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./dist/*.{html,js}"],
+  content: ["./dist/**/*.{html,js}", "./index.html"],
   theme: {
     extend: {
       animation: {
-        // adjust speed according to your need
         marquee: "marquee 40s linear infinite",
       },
       transitionTimingFunction: {
@@ -14,15 +13,15 @@ module.exports = {
         2000: "2000ms",
         height: "height",
         spacing: "margin, padding",
-        keyframes: {
-          wiggle: {
-            "0%, 100%": { transform: "rotate(-3deg)" },
-            "50%": { transform: "rotate(3deg)" },
-          },
-          marquee: {
-            "0%": { transform: "translateX(100%)" },
-            "100%": { transform: "translateX(-200%)" },
-          },
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-200%)" },
         },
       },
     },
